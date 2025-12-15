@@ -16,7 +16,7 @@ struct BabyGuardianApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            OnboardingContainerView()
                 .environmentObject(healthMonitor)
                 .environmentObject(alertManager)
                 .environmentObject(sensorService)
