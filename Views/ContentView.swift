@@ -12,15 +12,15 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            DashboardView()
+            EnhancedDashboardView()
                 .tabItem {
-                    Label("Dashboard", systemImage: "house.fill")
+                    Label("Home", systemImage: "house.fill")
                 }
                 .tag(0)
             
-            MonitoringView()
+            DetailedMonitoringView()
                 .tabItem {
-                    Label("Monitoring", systemImage: "heart.fill")
+                    Label("Monitor", systemImage: "heart.fill")
                 }
                 .tag(1)
             
@@ -30,19 +30,13 @@ struct ContentView: View {
                 }
                 .tag(2)
             
-            CameraView()
-                .tabItem {
-                    Label("Camera", systemImage: "video.fill")
-                }
-                .tag(3)
-            
             SettingsView()
                 .tabItem {
                     Label("Settings", systemImage: "gearshape.fill")
                 }
-                .tag(4)
+                .tag(3)
         }
-        .accentColor(.blue)
+        .accentColor(Color(red: 0.2, green: 0.5, blue: 0.9))
     }
 }
 
