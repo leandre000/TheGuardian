@@ -1,0 +1,48 @@
+name: BabyGuardian
+options:
+  bundleIdPrefix: com.babyguardian
+  deploymentTarget:
+    iOS: "14.0"
+  developmentLanguage: en
+  xcodeVersion: "14.0"
+
+packages:
+  Charts:
+    url: https://github.com/apple/swift-charts
+    from: 1.0.0
+
+targets:
+  BabyGuardian:
+    type: application
+    platform: iOS
+    deploymentTarget: "14.0"
+    sources:
+      - path: App
+      - path: Models
+      - path: Services
+      - path: Views
+      - path: DesignSystem
+      - path: Resources
+    resources:
+      - path: Resources
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.babyguardian.app
+      INFOPLIST_FILE: Resources/Info.plist
+      SWIFT_VERSION: "5.0"
+      TARGETED_DEVICE_FAMILY: "1,2" # iPhone and iPad
+      DEVELOPMENT_TEAM: ""
+      CODE_SIGN_STYLE: Automatic
+      SWIFT_ACTIVE_COMPILATION_CONDITIONS: DEBUG
+    dependencies:
+      - package: Charts
+
+schemes:
+  BabyGuardian:
+    build:
+      targets:
+        BabyGuardian: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+
