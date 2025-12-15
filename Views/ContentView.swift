@@ -24,9 +24,9 @@ struct ContentView: View {
                 }
                 .tag(1)
             
-            AlertsView()
+            CameraOverviewView()
                 .tabItem {
-                    Label("Alerts", systemImage: "bell.fill")
+                    Label("Camera", systemImage: "video.fill")
                 }
                 .tag(2)
             
@@ -36,7 +36,7 @@ struct ContentView: View {
                 }
                 .tag(3)
         }
-        .accentColor(Color(red: 0.2, green: 0.5, blue: 0.9))
+        .accentColor(Color(red: 1.0, green: 0.6, blue: 0.0))
     }
 }
 
