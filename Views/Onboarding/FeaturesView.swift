@@ -149,9 +149,9 @@ struct FeaturesView: View {
                 .padding(.bottom, 40)
             }
         }
-        .sheet(isPresented: $showLogin) {
-            LoginView()
-        }
+            .fullScreenCover(isPresented: $showLogin) {
+                LoginView()
+            }
     }
 }
 

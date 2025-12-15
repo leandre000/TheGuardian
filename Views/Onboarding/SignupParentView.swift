@@ -126,7 +126,7 @@ struct SignupParentView: View {
                     }
                 }
             }
-            .sheet(isPresented: $showLogin) {
+            .fullScreenCover(isPresented: $showLogin) {
                 LoginView()
             }
         }

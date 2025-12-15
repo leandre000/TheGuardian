@@ -43,21 +43,21 @@ struct SettingsMainView: View {
                             icon: "heart.fill",
                             title: "Health & Monitoring Preferences",
                             description: "Vitals Update, Temperature units,...",
-                            destination: AnyView(HealthPreferencesView())
+                            destination: AnyView(HealthMonitoringPreferencesView())
                         )
                         
                         SettingsCategoryRow(
                             icon: "brain",
                             title: "AI & Insights",
                             description: "Reset AI insights, Accuracy reports,...",
-                            destination: AnyView(AIInsightsView())
+                            destination: AnyView(AIInsightsSummaryView())
                         )
                         
                         SettingsCategoryRow(
                             icon: "square.grid.2x2",
                             title: "App Info & Support",
                             description: "User Guide / FAQs, Contact Support...",
-                            destination: AnyView(AppInfoView())
+                            destination: AnyView(AppInfoSupportView())
                         )
                         
                         SettingsCategoryRow(
@@ -162,39 +162,6 @@ struct SettingsMenuView: View {
                 }
             }
         }
-    }
-}
-
-// Placeholder views for settings categories
-struct DeviceManagementView: View {
-    var body: some View {
-        Text("Device Management")
-            .navigationTitle("Device Management")
-            .navigationBarTitleDisplayMode(.inline)
-    }
-}
-
-struct HealthPreferencesView: View {
-    var body: some View {
-        Text("Health Preferences")
-            .navigationTitle("Health & Monitoring")
-            .navigationBarTitleDisplayMode(.inline)
-    }
-}
-
-struct AIInsightsView: View {
-    var body: some View {
-        Text("AI & Insights")
-            .navigationTitle("AI & Insights")
-            .navigationBarTitleDisplayMode(.inline)
-    }
-}
-
-struct AppInfoView: View {
-    var body: some View {
-        Text("App Info & Support")
-            .navigationTitle("App Info & Support")
-            .navigationBarTitleDisplayMode(.inline)
     }
 }
 
