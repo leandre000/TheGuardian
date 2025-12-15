@@ -20,17 +20,17 @@ struct ContentView: View {
             
             DetailedMonitoringView()
                 .tabItem {
-                    Label("Monitor", systemImage: "heart.fill")
+                    Label("Health Stats", systemImage: "heart.fill")
                 }
                 .tag(1)
             
-            CameraOverviewView()
+            NotificationsView()
                 .tabItem {
-                    Label("Camera", systemImage: "video.fill")
+                    Label("Alerts", systemImage: "bell.fill")
                 }
                 .tag(2)
             
-            SettingsView()
+            SettingsMainView()
                 .tabItem {
                     Label("Settings", systemImage: "gearshape.fill")
                 }
