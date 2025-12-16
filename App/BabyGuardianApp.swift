@@ -14,17 +14,31 @@ struct BabyGuardianApp: App {
     @StateObject private var sensorService = SensorService()
     @StateObject private var cryDetection = CryDetectionService()
     
+    @State private var showLoading = true
+    
     var body: some Scene {
         WindowGroup {
-            OnboardingContainerView()
-                .environmentObject(healthMonitor)
-                .environmentObject(alertManager)
-                .environmentObject(sensorService)
-                .environmentObject(cryDetection)
-                .preferredColorScheme(.light)
-                .onAppear {
-                    setupAlertMonitoring()
-                }
+            if showLoading {
+                LoadingView()
+                    .onAppear {
+                        // Simulate loading time
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                            withAnimation {
+                                showLoading = false
+                            }
+                        }
+                    }
+            } else {
+                OnboardingContainerView()
+                    .environmentObject(healthMonitor)
+                    .environmentObject(alertManager)
+                    .environmentObject(sensorService)
+                    .environmentObject(cryDetection)
+                    .preferredColorScheme(.light)
+                    .onAppear {
+                        setupAlertMonitoring()
+                    }
+            }
         }
     }
     
