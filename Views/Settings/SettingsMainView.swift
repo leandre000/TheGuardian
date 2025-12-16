@@ -43,14 +43,14 @@ struct SettingsMainView: View {
                             icon: "heart.fill",
                             title: "Health & Monitoring Preferences",
                             description: "Vitals Update, Temperature units,...",
-                            destination: AnyView(HealthMonitoringPreferencesView())
+                            destination: AnyView(HealthPreferencesView())
                         )
                         
                         SettingsCategoryRow(
                             icon: "brain",
                             title: "AI & Insights",
                             description: "Reset AI insights, Accuracy reports,...",
-                            destination: AnyView(AIInsightsSummaryView())
+                            destination: AnyView(AIInsightsView())
                         )
                         
                         SettingsCategoryRow(
@@ -164,6 +164,32 @@ struct SettingsMenuView: View {
         }
     }
 }
+
+// Placeholder views for settings categories
+struct DeviceManagementView: View {
+    var body: some View {
+        Text("Device Management")
+            .navigationTitle("Device Management")
+            .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct HealthPreferencesView: View {
+    var body: some View {
+        Text("Health Preferences")
+            .navigationTitle("Health & Monitoring")
+            .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct AIInsightsView: View {
+    var body: some View {
+        Text("AI & Insights")
+            .navigationTitle("AI & Insights")
+            .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
 
 struct EmergencySettingsView: View {
     var body: some View {
