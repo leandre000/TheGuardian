@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import DesignSystem
 
 struct FeaturesView: View {
     @Binding var currentStep: OnboardingState.OnboardingStep
