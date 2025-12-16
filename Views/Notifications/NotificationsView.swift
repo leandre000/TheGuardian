@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import DesignSystem
 
 struct NotificationsView: View {
     @EnvironmentObject var alertManager: AlertManager

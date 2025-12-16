@@ -98,7 +98,9 @@ struct SettingsCategoryRow: View {
     
     var body: some View {
         Button(action: {
-            navigate = true
+            withAnimation(AppAnimations.springSmooth) {
+                navigate = true
+            }
         }) {
             HStack(spacing: 16) {
                 // Icon
@@ -111,6 +113,8 @@ struct SettingsCategoryRow: View {
                         .font(.system(size: 20))
                         .foregroundColor(AppTheme.primaryOrange)
                 }
+                .scaleEffect(navigate ? 0.9 : 1.0)
+                .animation(AppAnimations.quick, value: navigate)
                 
                 // Content
                 VStack(alignment: .leading, spacing: 4) {

@@ -92,6 +92,7 @@ struct SignupParentView: View {
                             Text("Next")
                                 .primaryButton()
                         }
+                        .buttonPress()
                         .padding(.horizontal, 24)
                         .padding(.top, 20)
                         .padding(.bottom, 40)

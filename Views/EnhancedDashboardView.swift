@@ -86,6 +86,8 @@ struct EnhancedDashboardView: View {
                                         color: AppTheme.primaryOrange,
                                         showGraph: true
                                     )
+                                    .cardHover()
+                                    .scaleIn(delay: 0.1)
                                     
                                     MetricCard(
                                         icon: "moon.fill",
@@ -94,6 +96,8 @@ struct EnhancedDashboardView: View {
                                         color: .blue,
                                         showGraph: false
                                     )
+                                    .cardHover()
+                                    .scaleIn(delay: 0.2)
                                     
                                     MetricCard(
                                         icon: "thermometer",
@@ -102,6 +106,8 @@ struct EnhancedDashboardView: View {
                                         color: .orange,
                                         showGraph: false
                                     )
+                                    .cardHover()
+                                    .scaleIn(delay: 0.3)
                                     
                                     MetricCard(
                                         icon: "wind",
@@ -110,6 +116,8 @@ struct EnhancedDashboardView: View {
                                         color: .green,
                                         showGraph: false
                                     )
+                                    .cardHover()
+                                    .scaleIn(delay: 0.4)
                                 }
                                 .padding(.horizontal, 20)
                                 .padding(.vertical, 16)
@@ -132,9 +140,13 @@ struct EnhancedDashboardView: View {
                             .padding(.top, 20)
                             
                             ActionRow(text: "See what your baby is up to...")
+                                .staggered(index: 0)
                             ActionRow(text: "Navigate our app's new features...")
+                                .staggered(index: 1)
                             ActionRow(text: "Change your settings to better fit...")
+                                .staggered(index: 2)
                             ActionRow(text: "Read on the new regulations about...")
+                                .staggered(index: 3)
                         }
                         .background(Color(.systemBackground))
                         .padding(.top, 8)
@@ -151,6 +163,8 @@ struct EnhancedDashboardView: View {
                                     subtitle: "Min. sleep hours",
                                     color: .blue
                                 )
+                                .cardHover()
+                                .scaleIn(delay: 0.1)
                                 
                                 InsightCard(
                                     title: "Temperature",
@@ -158,6 +172,8 @@ struct EnhancedDashboardView: View {
                                     subtitle: "Optimal Temp.",
                                     color: .orange
                                 )
+                                .cardHover()
+                                .scaleIn(delay: 0.2)
                             }
                             .padding(.horizontal, 20)
                             .padding(.bottom, 20)

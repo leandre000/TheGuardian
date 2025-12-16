@@ -33,30 +33,48 @@ struct OnboardingFlowView: View {
             switch onboardingState.currentStep {
             case .splash:
                 SplashView(currentStep: $onboardingState.currentStep)
-                    .transition(.opacity)
+                    .transition(.asymmetric(
+                        insertion: .scale.combined(with: .opacity),
+                        removal: .opacity
+                    ))
                 
             case .features:
                 FeaturesView(currentStep: $onboardingState.currentStep)
-                    .transition(.move(edge: .trailing))
+                    .transition(.asymmetric(
+                        insertion: .move(edge: .trailing).combined(with: .opacity),
+                        removal: .move(edge: .leading).combined(with: .opacity)
+                    ))
                 
             case .signupParent:
                 SignupParentView(currentStep: $onboardingState.currentStep)
-                    .transition(.move(edge: .trailing))
+                    .transition(.asymmetric(
+                        insertion: .move(edge: .trailing).combined(with: .opacity),
+                        removal: .move(edge: .leading).combined(with: .opacity)
+                    ))
                 
             case .signupBaby:
                 SignupBabyView(currentStep: $onboardingState.currentStep)
-                    .transition(.move(edge: .trailing))
+                    .transition(.asymmetric(
+                        insertion: .move(edge: .trailing).combined(with: .opacity),
+                        removal: .move(edge: .leading).combined(with: .opacity)
+                    ))
                 
             case .signupEmergency:
                 SignupEmergencyView(currentStep: $onboardingState.currentStep)
-                    .transition(.move(edge: .trailing))
+                    .transition(.asymmetric(
+                        insertion: .move(edge: .trailing).combined(with: .opacity),
+                        removal: .move(edge: .leading).combined(with: .opacity)
+                    ))
                 
             case .completed:
                 ContentView()
-                    .transition(.opacity)
+                    .transition(.asymmetric(
+                        insertion: .scale.combined(with: .opacity),
+                        removal: .opacity
+                    ))
             }
         }
-        .animation(.easeInOut(duration: 0.3), value: onboardingState.currentStep)
+        .animation(AppAnimations.springSmooth, value: onboardingState.currentStep)
     }
 }
 

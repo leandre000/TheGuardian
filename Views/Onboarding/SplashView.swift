@@ -47,21 +47,26 @@ struct SplashView: View {
                         .foregroundColor(.white)
                 }
                 .padding(.bottom, 40)
+                .scaleIn(delay: 0.2)
+                .pulse(scale: 1.05)
                 
                 // Title
                 HStack(spacing: 12) {
                     Text("Your")
                         .font(.system(size: 42, weight: .bold))
                         .foregroundColor(.primary)
+                        .fadeIn(delay: 0.1)
                     
                     HStack(spacing: 8) {
                         Text("Baby")
                             .font(.system(size: 42, weight: .bold))
                             .foregroundColor(AppTheme.primaryOrange)
+                            .fadeIn(delay: 0.2)
                         
                         Image(systemName: "eye.fill")
                             .font(.system(size: 32))
                             .foregroundColor(AppTheme.primaryOrange)
+                            .bounceIn(delay: 0.3)
                     }
                 }
                 .padding(.bottom, 8)
@@ -71,6 +76,7 @@ struct SplashView: View {
                     .font(.system(size: 24, weight: .medium))
                     .foregroundColor(.secondary)
                     .padding(.bottom, 60)
+                    .fadeIn(delay: 0.4)
                 
                 Spacer()
                 

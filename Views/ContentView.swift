@@ -37,6 +37,7 @@ struct ContentView: View {
                 .tag(3)
         }
         .accentColor(AppTheme.primaryOrange)
+        .animation(AppAnimations.springSmooth, value: selectedTab)
     }
 }
 

@@ -96,8 +96,7 @@ struct LoadingView: View {
                 .scaleEffect(scale)
                 .rotationEffect(.degrees(rotationAngle))
                 .animation(
-                    Animation.easeInOut(duration: 2.0)
-                        .repeatForever(autoreverses: true),
+                    AppAnimations.springGentle.repeatForever(autoreverses: true),
                     value: scale
                 )
                 

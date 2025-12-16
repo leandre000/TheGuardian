@@ -108,13 +108,14 @@ struct FeaturesView: View {
                 VStack(spacing: 16) {
                     // Sign Up Button
                     Button(action: {
-                        withAnimation(.easeInOut(duration: 0.3)) {
+                        withAnimation(AppAnimations.springSmooth) {
                             currentStep = .signupParent
                         }
                     }) {
                         Text("Sign up")
                             .primaryButton()
                     }
+                    .buttonPress()
                     
                     // Log In Button
                     Button(action: {
@@ -123,6 +124,7 @@ struct FeaturesView: View {
                         Text("Log in")
                             .secondaryButton()
                     }
+                    .buttonPress()
                 }
                 .padding(.horizontal, 32)
                 .padding(.bottom, 40)
