@@ -57,7 +57,7 @@ struct SettingsMainView: View {
                             icon: "square.grid.2x2",
                             title: "App Info & Support",
                             description: "User Guide / FAQs, Contact Support...",
-                            destination: AnyView(AppInfoSupportView())
+                            destination: AnyView(AppInfoView())
                         )
                         
                         SettingsCategoryRow(
