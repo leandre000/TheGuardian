@@ -154,7 +154,7 @@ struct NotificationsAlertsView: View {
                 Button(action: {}) {
                     Text("Manage Categories")
                         .font(.system(size: 16))
-                        .foregroundColor(.green)
+                        .foregroundColor(AppTheme.successGreen)
                 }
             }
         }
@@ -198,7 +198,7 @@ struct AlertTypeRow: View {
             // Toggle
             Toggle("", isOn: $isEnabled)
                 .labelsHidden()
-                .tint(Color(red: 1.0, green: 0.6, blue: 0.0))
+                .tint(AppTheme.primaryOrange)
         }
         .padding(.horizontal, 20)
         .padding(.vertical, 16)
@@ -219,7 +219,7 @@ struct ToggleRow: View {
             
             Toggle("", isOn: $isEnabled)
                 .labelsHidden()
-                .tint(Color(red: 1.0, green: 0.6, blue: 0.0))
+                .tint(AppTheme.primaryOrange)
         }
         .padding(.horizontal, 20)
         .padding(.vertical, 16)

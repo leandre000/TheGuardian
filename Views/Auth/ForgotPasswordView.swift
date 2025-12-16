@@ -51,21 +51,7 @@ struct ForgotPasswordView: View {
                             showEmailSent = true
                         }) {
                             Text("Send")
-                                .font(.system(size: 18, weight: .semibold))
-                                .foregroundColor(.white)
-                                .frame(maxWidth: .infinity)
-                                .padding(.vertical, 16)
-                                .background(
-                                    LinearGradient(
-                                        gradient: Gradient(colors: [
-                                            Color(red: 1.0, green: 0.6, blue: 0.0),
-                                            Color(red: 1.0, green: 0.5, blue: 0.0)
-                                        ]),
-                                        startPoint: .leading,
-                                        endPoint: .trailing
-                                    )
-                                )
-                                .cornerRadius(14)
+                                .primaryButton()
                         }
                         .padding(.horizontal, 24)
                         .padding(.top, 20)

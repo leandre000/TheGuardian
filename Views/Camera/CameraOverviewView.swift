@@ -40,7 +40,7 @@ struct CameraOverviewView: View {
                                 }) {
                                     Image(systemName: "plus")
                                         .font(.system(size: 20, weight: .bold))
-                                        .foregroundColor(.primary)
+                                        .foregroundColor(AppTheme.primaryOrange)
                                 }
                             }
                         }

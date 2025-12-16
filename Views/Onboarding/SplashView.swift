@@ -57,11 +57,11 @@ struct SplashView: View {
                     HStack(spacing: 8) {
                         Text("Baby")
                             .font(.system(size: 42, weight: .bold))
-                            .foregroundColor(Color(red: 1.0, green: 0.6, blue: 0.0))
+                            .foregroundColor(AppTheme.primaryOrange)
                         
                         Image(systemName: "eye.fill")
                             .font(.system(size: 32))
-                            .foregroundColor(Color(red: 1.0, green: 0.6, blue: 0.0))
+                            .foregroundColor(AppTheme.primaryOrange)
                     }
                 }
                 .padding(.bottom, 8)
@@ -90,18 +90,9 @@ struct SplashView: View {
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 18)
-                    .background(
-                        LinearGradient(
-                            gradient: Gradient(colors: [
-                                Color(red: 1.0, green: 0.6, blue: 0.0),
-                                Color(red: 1.0, green: 0.5, blue: 0.0)
-                            ]),
-                            startPoint: .leading,
-                            endPoint: .trailing
-                        )
-                    )
+                    .background(AppTheme.orangeGradient)
                     .cornerRadius(16)
-                    .shadow(color: Color(red: 1.0, green: 0.6, blue: 0.0).opacity(0.4), radius: 15, x: 0, y: 8)
+                    .shadow(color: AppTheme.primaryOrange.opacity(0.4), radius: 15, x: 0, y: 8)
                 }
                 .padding(.horizontal, 32)
                 .padding(.bottom, 50)

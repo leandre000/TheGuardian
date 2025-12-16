@@ -112,21 +112,7 @@ struct FeaturesView: View {
                         }
                     }) {
                         Text("Sign up")
-                            .font(.system(size: 18, weight: .semibold))
-                            .foregroundColor(.white)
-                            .frame(maxWidth: .infinity)
-                            .padding(.vertical, 16)
-                            .background(
-                                LinearGradient(
-                                    gradient: Gradient(colors: [
-                                        Color(red: 1.0, green: 0.6, blue: 0.0),
-                                        Color(red: 1.0, green: 0.5, blue: 0.0)
-                                    ]),
-                                    startPoint: .leading,
-                                    endPoint: .trailing
-                                )
-                            )
-                            .cornerRadius(14)
+                            .primaryButton()
                     }
                     
                     // Log In Button
@@ -134,15 +120,7 @@ struct FeaturesView: View {
                         showLogin = true
                     }) {
                         Text("Log in")
-                            .font(.system(size: 18, weight: .semibold))
-                            .foregroundColor(Color(red: 1.0, green: 0.6, blue: 0.0))
-                            .frame(maxWidth: .infinity)
-                            .padding(.vertical, 16)
-                            .background(Color.white)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 14)
-                                    .stroke(Color(red: 1.0, green: 0.6, blue: 0.0), lineWidth: 2)
-                            )
+                            .secondaryButton()
                     }
                 }
                 .padding(.horizontal, 32)
@@ -182,7 +160,7 @@ struct FeatureRow: View {
             // Number circle
             ZStack {
                 Circle()
-                    .fill(Color(red: 0.2, green: 0.5, blue: 0.9))
+                    .fill(AppTheme.primaryBlue)
                     .frame(width: 32, height: 32)
                 
                 Text(number)

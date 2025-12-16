@@ -83,7 +83,7 @@ struct EnhancedDashboardView: View {
                                         icon: "heart.fill",
                                         value: "\(healthMonitor.currentMetrics?.heartRate ?? 71)",
                                         unit: "bpm",
-                                        color: Color(red: 1.0, green: 0.6, blue: 0.0),
+                                        color: AppTheme.primaryOrange,
                                         showGraph: true
                                     )
                                     
@@ -139,12 +139,10 @@ struct EnhancedDashboardView: View {
                         .background(Color(.systemBackground))
                         .padding(.top, 8)
                         
-                        // AI Insights Section
-                        VStack(alignment: .leading, spacing: 16) {
-                            Text("AI Insights")
-                                .font(.system(size: 20, weight: .bold))
-                                .padding(.horizontal, 20)
-                                .padding(.top, 20)
+                    // AI Insights Section
+                    VStack(alignment: .leading, spacing: 16) {
+                        SectionHeader(title: "AI Insights")
+                            .padding(.top, 20)
                             
                             HStack(spacing: 16) {
                                 InsightCard(
@@ -257,7 +255,7 @@ struct InsightCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text(title)
-                .font(.system(size: 14, weight: .medium))
+                .font(AppTheme.fontCaption)
                 .foregroundColor(.secondary)
             
             Text(value)
@@ -265,7 +263,7 @@ struct InsightCard: View {
                 .foregroundColor(color)
             
             Text(subtitle)
-                .font(.system(size: 12))
+                .font(AppTheme.fontCaption)
                 .foregroundColor(.secondary)
         }
         .frame(maxWidth: .infinity, alignment: .leading)

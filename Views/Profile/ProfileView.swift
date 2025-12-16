@@ -44,10 +44,10 @@ struct ProfileView: View {
                             
                             Text("Mother")
                                 .font(.system(size: 14, weight: .medium))
-                                .foregroundColor(Color(red: 1.0, green: 0.6, blue: 0.0))
+                                .foregroundColor(AppTheme.primaryOrange)
                                 .padding(.horizontal, 12)
                                 .padding(.vertical, 4)
-                                .background(Color(red: 1.0, green: 0.6, blue: 0.0).opacity(0.2))
+                                .background(AppTheme.primaryOrange.opacity(0.2))
                                 .cornerRadius(8)
                         }
                         
@@ -60,16 +60,7 @@ struct ProfileView: View {
                                 .foregroundColor(.white)
                                 .frame(width: 100)
                                 .padding(.vertical, 10)
-                                .background(
-                                    LinearGradient(
-                                        gradient: Gradient(colors: [
-                                            Color(red: 1.0, green: 0.6, blue: 0.0),
-                                            Color(red: 1.0, green: 0.5, blue: 0.0)
-                                        ]),
-                                        startPoint: .leading,
-                                        endPoint: .trailing
-                                    )
-                                )
+                                .background(AppTheme.orangeGradient)
                                 .cornerRadius(12)
                         }
                     }
@@ -115,7 +106,7 @@ struct ProfileView: View {
                                 Button(action: {}) {
                                     Text("View Health Data")
                                         .font(.system(size: 14, weight: .medium))
-                                        .foregroundColor(Color(red: 1.0, green: 0.6, blue: 0.0))
+                                        .foregroundColor(AppTheme.primaryOrange)
                                 }
                             }
                             .padding(16)

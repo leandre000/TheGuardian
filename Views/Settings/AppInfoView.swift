@@ -177,7 +177,7 @@ struct SupportOption: View {
             HStack {
                 Image(systemName: icon)
                     .font(.system(size: 18))
-                    .foregroundColor(Color(red: 1.0, green: 0.6, blue: 0.0))
+                    .foregroundColor(AppTheme.primaryOrange)
                 
                 Text(title)
                     .font(.system(size: 15))
@@ -255,7 +255,7 @@ struct CommunityRow: View {
                     ForEach(0..<5) { _ in
                         Image(systemName: "star.fill")
                             .font(.system(size: 14))
-                            .foregroundColor(Color(red: 1.0, green: 0.6, blue: 0.0))
+                            .foregroundColor(AppTheme.primaryOrange)
                     }
                 }
             } else {

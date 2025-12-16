@@ -41,11 +41,7 @@ struct AIInsightsView: View {
                                 Circle()
                                     .trim(from: 0, to: 0.92)
                                     .stroke(
-                                        LinearGradient(
-                                            gradient: Gradient(colors: [.green, .blue]),
-                                            startPoint: .topLeading,
-                                            endPoint: .bottomTrailing
-                                        ),
+                                        AppTheme.blueGradient,
                                         style: StrokeStyle(lineWidth: 12, lineCap: .round)
                                     )
                                     .frame(width: 120, height: 120)
@@ -131,10 +127,10 @@ struct AIInsightsView: View {
         .navigationBarTitleDisplayMode(.large)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                Button(action: {}) {
-                    Image(systemName: "clock")
-                        .foregroundColor(.primary)
-                }
+                    Button(action: {}) {
+                        Image(systemName: "clock")
+                            .foregroundColor(AppTheme.primaryOrange)
+                    }
             }
         }
     }

@@ -70,13 +70,13 @@ struct LoginView: View {
                             // Forgot Password Link
                             HStack {
                                 Spacer()
-                                Button(action: {
-                                    showForgotPassword = true
-                                }) {
-                                    Text("Forgot Password?")
-                                        .font(.system(size: 15))
-                                        .foregroundColor(Color(red: 1.0, green: 0.6, blue: 0.0))
-                                }
+                            Button(action: {
+                                showForgotPassword = true
+                            }) {
+                                Text("Forgot Password?")
+                                    .font(.system(size: 15))
+                                    .foregroundColor(AppTheme.primaryOrange)
+                            }
                             }
                             
                             // Log In Button
@@ -85,21 +85,7 @@ struct LoginView: View {
                                 dismiss()
                             }) {
                                 Text("Log In")
-                                    .font(.system(size: 18, weight: .semibold))
-                                    .foregroundColor(.white)
-                                    .frame(maxWidth: .infinity)
-                                    .padding(.vertical, 16)
-                                    .background(
-                                        LinearGradient(
-                                            gradient: Gradient(colors: [
-                                                Color(red: 1.0, green: 0.6, blue: 0.0),
-                                                Color(red: 1.0, green: 0.5, blue: 0.0)
-                                            ]),
-                                            startPoint: .leading,
-                                            endPoint: .trailing
-                                        )
-                                    )
-                                    .cornerRadius(14)
+                                    .primaryButton()
                             }
                             .padding(.top, 8)
                         }
@@ -142,7 +128,7 @@ struct LoginView: View {
                                 showSignup = true
                             }) {
                                 Text("Sign Up")
-                                    .foregroundColor(Color(red: 1.0, green: 0.6, blue: 0.0))
+                                    .foregroundColor(AppTheme.primaryOrange)
                                     .fontWeight(.semibold)
                             }
                         }

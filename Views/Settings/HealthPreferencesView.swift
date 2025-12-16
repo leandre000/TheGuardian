@@ -197,7 +197,7 @@ struct PreferenceRow: View {
         HStack(alignment: .top, spacing: 16) {
             Image(systemName: icon)
                 .font(.system(size: 20))
-                .foregroundColor(Color(red: 1.0, green: 0.6, blue: 0.0))
+                .foregroundColor(AppTheme.primaryOrange)
                 .frame(width: 24)
             
             VStack(alignment: .leading, spacing: 4) {
@@ -215,7 +215,7 @@ struct PreferenceRow: View {
             
             Toggle("", isOn: $isEnabled)
                 .labelsHidden()
-                .tint(Color(red: 1.0, green: 0.6, blue: 0.0))
+                .tint(AppTheme.primaryOrange)
         }
         .padding(.horizontal, 20)
         .padding(.vertical, 16)

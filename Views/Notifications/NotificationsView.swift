@@ -135,7 +135,7 @@ struct NotificationSection: View {
                 if let count = count {
                     Text("(\(count) new)")
                         .font(.system(size: 16, weight: .medium))
-                        .foregroundColor(Color(red: 1.0, green: 0.6, blue: 0.0))
+                        .foregroundColor(AppTheme.primaryOrange)
                 }
                 
                 Spacer()

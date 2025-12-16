@@ -104,12 +104,12 @@ struct SettingsCategoryRow: View {
                 // Icon
                 ZStack {
                     Circle()
-                        .fill(Color(red: 1.0, green: 0.6, blue: 0.0).opacity(0.2))
+                        .fill(AppTheme.primaryOrange.opacity(0.2))
                         .frame(width: 44, height: 44)
                     
                     Image(systemName: icon)
                         .font(.system(size: 20))
-                        .foregroundColor(Color(red: 1.0, green: 0.6, blue: 0.0))
+                        .foregroundColor(AppTheme.primaryOrange)
                 }
                 
                 // Content

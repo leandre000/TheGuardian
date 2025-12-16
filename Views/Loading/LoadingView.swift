@@ -21,17 +21,17 @@ struct LoadingView: View {
             
             // Decorative circles
             Circle()
-                .fill(Color.blue.opacity(0.1))
+                .fill(AppTheme.primaryBlue.opacity(0.1))
                 .frame(width: 200, height: 200)
                 .offset(x: -150, y: -300)
             
             Circle()
-                .fill(Color.blue.opacity(0.1))
+                .fill(AppTheme.primaryBlue.opacity(0.1))
                 .frame(width: 150, height: 150)
                 .offset(x: -120, y: 400)
             
             Circle()
-                .fill(Color(red: 1.0, green: 0.5, blue: 0.4).opacity(0.1))
+                .fill(AppTheme.primaryOrange.opacity(0.1))
                 .frame(width: 180, height: 180)
                 .offset(x: 150, y: 400)
             
@@ -41,18 +41,9 @@ struct LoadingView: View {
                 ZStack {
                     // Shield shape
                     ShieldShape()
-                        .fill(
-                            LinearGradient(
-                                gradient: Gradient(colors: [
-                                    Color.blue,
-                                    Color.blue.opacity(0.8)
-                                ]),
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
-                            )
-                        )
+                        .fill(AppTheme.blueGradient)
                         .frame(width: 120, height: 140)
-                        .shadow(color: Color.blue.opacity(0.3), radius: 20, x: 0, y: 10)
+                        .shadow(color: AppTheme.primaryBlue.opacity(0.3), radius: 20, x: 0, y: 10)
                     
                     // Baby face circle
                     Circle()
@@ -84,11 +75,11 @@ struct LoadingView: View {
                         ForEach(0..<3) { index in
                             HStack(spacing: 0) {
                                 Rectangle()
-                                    .fill(index == 0 ? Color.blue : Color(red: 1.0, green: 0.5, blue: 0.4))
+                                    .fill(index == 0 ? AppTheme.primaryBlue : AppTheme.primaryOrange)
                                     .frame(width: 30, height: 3)
                                 
                                 Circle()
-                                    .fill(index == 0 ? Color.blue : Color(red: 1.0, green: 0.5, blue: 0.4))
+                                    .fill(index == 0 ? AppTheme.primaryBlue : AppTheme.primaryOrange)
                                     .frame(width: 8, height: 8)
                             }
                             .offset(x: index == 0 ? -50 : (index == 1 ? -25 : 0))
@@ -113,7 +104,7 @@ struct LoadingView: View {
                 // Loading text
                 Text("LOADING...")
                     .font(.system(size: 18, weight: .semibold, design: .rounded))
-                    .foregroundColor(Color.blue.opacity(0.8))
+                    .foregroundColor(AppTheme.primaryBlue.opacity(0.8))
                     .opacity(opacity)
                     .animation(
                         Animation.easeInOut(duration: 1.0)

@@ -120,10 +120,10 @@ struct TabButton: View {
             VStack(spacing: 8) {
                 Text(title)
                     .font(.system(size: 16, weight: isSelected ? .semibold : .regular))
-                    .foregroundColor(isSelected ? Color(red: 0.2, green: 0.5, blue: 0.9) : .secondary)
+                    .foregroundColor(isSelected ? AppTheme.primaryBlue : .secondary)
                 
                 Rectangle()
-                    .fill(isSelected ? Color(red: 0.2, green: 0.5, blue: 0.9) : Color.clear)
+                    .fill(isSelected ? AppTheme.primaryBlue : Color.clear)
                     .frame(height: 3)
             }
         }
@@ -266,7 +266,7 @@ struct RecommendationRow: View {
     var body: some View {
         HStack(alignment: .top, spacing: 12) {
             Circle()
-                .fill(Color(red: 0.2, green: 0.5, blue: 0.9))
+                .fill(AppTheme.primaryBlue)
                 .frame(width: 8, height: 8)
                 .padding(.top, 6)
             
@@ -278,6 +278,7 @@ struct RecommendationRow: View {
             Spacer()
         }
         .padding(.horizontal, 20)
+        .padding(.vertical, 8)
     }
 }
 
@@ -516,13 +517,13 @@ struct HealthDetailView: View {
             VStack(alignment: .leading, spacing: 16) {
                 HStack {
                     Text("Feeding times")
-                        .font(.system(size: 18, weight: .bold))
+                        .font(AppTheme.fontHeadline)
                     
                     Spacer()
                     
                     Button(action: {}) {
                         Image(systemName: "plus")
-                            .foregroundColor(Color(red: 1.0, green: 0.6, blue: 0.0))
+                            .foregroundColor(AppTheme.primaryOrange)
                     }
                 }
                 .padding(.horizontal, 20)
@@ -660,13 +661,13 @@ struct OtherDetailView: View {
             VStack(alignment: .leading, spacing: 16) {
                 HStack {
                     Text("Falling history")
-                        .font(.system(size: 18, weight: .bold))
+                        .font(AppTheme.fontHeadline)
                     
                     Spacer()
                     
                     Button(action: {}) {
                         Image(systemName: "plus")
-                            .foregroundColor(Color(red: 1.0, green: 0.6, blue: 0.0))
+                            .foregroundColor(AppTheme.primaryOrange)
                     }
                 }
                 .padding(.horizontal, 20)
