@@ -80,21 +80,27 @@ struct FeaturesView: View {
                     
                     FeatureRow(
                         number: "1",
+                        icon: "heart.fill",
                         title: "Health Tracking",
                         description: "Monitor heart rate, temperature & sleep"
                     )
+                    .staggered(index: 0)
                     
                     FeatureRow(
                         number: "2",
+                        icon: "video.fill",
                         title: "Live Camera Feed",
                         description: "See your baby anytime"
                     )
+                    .staggered(index: 1)
                     
                     FeatureRow(
                         number: "3",
+                        icon: "bell.fill",
                         title: "Fall Detection Alerts",
                         description: "Get instant notifications for safety"
                     )
+                    .staggered(index: 2)
                 }
                 .padding(28)
                 .background(Color(.systemBackground))

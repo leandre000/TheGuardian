@@ -24,6 +24,7 @@ struct SettingsMainView: View {
                             description: "Parent profile, Baby Profile...",
                             destination: AnyView(ProfileView())
                         )
+                        .staggered(index: 0)
                         
                         SettingsCategoryRow(
                             icon: "bell.fill",
@@ -31,6 +32,7 @@ struct SettingsMainView: View {
                             description: "Alert sounds, push notifications, SMS...",
                             destination: AnyView(NotificationsAlertsView())
                         )
+                        .staggered(index: 1)
                         
                         SettingsCategoryRow(
                             icon: "ipad",
@@ -38,6 +40,7 @@ struct SettingsMainView: View {
                             description: "Connected Devices, Add New Device...",
                             destination: AnyView(DeviceManagementView())
                         )
+                        .staggered(index: 2)
                         
                         SettingsCategoryRow(
                             icon: "heart.fill",
@@ -45,27 +48,23 @@ struct SettingsMainView: View {
                             description: "Vitals Update, Temperature units,...",
                             destination: AnyView(HealthPreferencesView())
                         )
+                        .staggered(index: 3)
                         
                         SettingsCategoryRow(
-                            icon: "brain",
-                            title: "AI & Insights",
-                            description: "Reset AI insights, Accuracy reports,...",
+                            icon: "brain.head.profile",
+                            title: "AI Insights",
+                            description: "Wellness score, predictions, trends...",
                             destination: AnyView(AIInsightsView())
                         )
+                        .staggered(index: 4)
                         
                         SettingsCategoryRow(
-                            icon: "square.grid.2x2",
+                            icon: "info.circle.fill",
                             title: "App Info & Support",
-                            description: "User Guide / FAQs, Contact Support...",
+                            description: "Version, help, contact, legal...",
                             destination: AnyView(AppInfoView())
                         )
-                        
-                        SettingsCategoryRow(
-                            icon: "shield.fill",
-                            title: "Emergency Settings",
-                            description: "Emergency Contacts, Auto-Call Options,...",
-                            destination: AnyView(EmergencySettingsView())
-                        )
+                        .staggered(index: 5)
                     }
                     .padding(.top, 8)
                 }

@@ -146,8 +146,9 @@ struct NotificationSection: View {
             
             // Notifications List
             VStack(spacing: 12) {
-                ForEach(notifications) { notification in
+                ForEach(Array(notifications.enumerated()), id: \.element.id) { index, notification in
                     NotificationRow(notification: notification)
+                        .staggered(index: index)
                 }
             }
             .padding(.horizontal, 20)
